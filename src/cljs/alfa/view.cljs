@@ -7,10 +7,6 @@
      [cljs-react-material-ui.reagent :as rui]))
 
 
- (defn excerpt
-   []
-   [:h1 "LOREM IPSUM"])
-
 (def data (rc/atom {1 "Lorem Ipsum"
                  2 "Lorem ipsum 2"
                  3 "Lorem ipsum 3"}))
@@ -34,7 +30,6 @@
         [:h1 "Just hit it again"]
         [:h1 (str (@data @counter) @counter)]))))
 
-(def bmi-data (rc/atom {:height 180 :weight 80}))
 
 (defn bmi
   []
