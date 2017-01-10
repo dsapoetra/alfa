@@ -26,7 +26,8 @@
    [danlentz/clj-uuid "0.1.6"]
    [me.raynes/fs "1.4.6"]
    [pjstadig/humane-test-output "0.8.1"]
-   [ring/ring-mock "0.3.0"]]
+   [ring/ring-mock "0.3.0"]
+   [datascript "0.15.5"]]
 
   :injections [(require 'pjstadig.humane-test-output)
                (pjstadig.humane-test-output/activate!)]

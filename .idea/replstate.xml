@@ -1,4 +1,4 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="ReplState" timestamp="1482108312341">{:repl-history {:ide [], :local [], :remote []}}</component>
+  <component name="ReplState" timestamp="1484033538565">{:repl-history {:ide [], :local [&quot;(restart)&quot; &quot;(try\n  (/ 1 \&quot;0\&quot;)\n  (catch Exception e\n    3))&quot; &quot;(time (apply * (range 1 1001)))&quot; &quot;(time (apply *' (range 1 1001)))&quot; &quot;(time (apply *' (range 1 21)))&quot; &quot;(def a (range 20))&quot; &quot;(def a (range 21))&quot; &quot;a&quot; &quot;(def b (range 19))&quot; &quot;b&quot; &quot;(clojure.set/difference (set a) (set b))&quot; &quot;(stop)&quot; &quot;(start)&quot;], :remote []}}</component>
 </project>

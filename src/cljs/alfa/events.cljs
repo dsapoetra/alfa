@@ -28,3 +28,7 @@
   :set-title
   (fn [db [_ title]]
     (assoc db :title title)))
+
+#_ (re/reg-event-db
+   :set-drawer-state
+   (fn [db ]))

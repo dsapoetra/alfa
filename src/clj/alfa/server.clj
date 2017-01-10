@@ -3,7 +3,8 @@
      [com.stuartsierra.component :as component]
      [immutant.web :as web]
      [immutant.util :as log]
-     [ring.middleware.defaults :refer [wrap-defaults site-defaults]]))
+     [ring.middleware.defaults :refer [wrap-defaults site-defaults]])
+   (:gen-class))
 
 (defrecord Server [handler path host]
   component/Lifecycle

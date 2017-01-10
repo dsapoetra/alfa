@@ -3,7 +3,8 @@
      [compojure.core :refer [GET POST routes] :as compo]
      [compojure.route :as croute]
      [com.stuartsierra.component :as component]
-     [alfa.pages :as page]))
+     [alfa.pages :as page])
+   (:gen-class))
 
 (declare spa-routes)
 

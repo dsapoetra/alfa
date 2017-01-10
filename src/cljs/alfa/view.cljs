@@ -54,20 +54,11 @@
       [:center
        [rui/app-bar
         {:title              "Dsapoetra"
-         :icon-element-left  (ui/icon-button
-                               {:on-click #(re/dispatch
-                                            (handle-toggle))}
-                               (ic/action-view-headline
-                                 {:on-click #(re/dispatch
-                                              (handle-toggle))}))
          :icon-element-right (ui/icon-button
-                               {:on-click #(re/dispatch
-                                            (handle-toggle))}
-                               (ic/action-autorenew
-                                 {:on-click #(re/dispatch
-                                              (handle-toggle))}))
-         :style {:backgroundColor "#F46828"
-                 :color "#F46828"
+                               {:on-mouse-over #(handle-toggle)}
+                               (ic/action-autorenew))
+         :style {:backgroundColor "black"
+                 :color "black"
                  :width "100%"}}]])))
 
  (defn badan-1
@@ -98,13 +89,19 @@
                         [:set-excerpt (excerpt-2)])}]]]
         [rui/tab
          {:label "Blog"
-          :style {:background "#DA7F36"}}]
+          :style {:background "#DA7F36"}}
+         [rui/text-field
+          {:hint-text "put it here"}]]
         [rui/tab
          {:label "Contact"
+          :style {:background "#DA7F36"}}]
+        [rui/tab
+         {:label "Contact 2"
           :style {:background "#DA7F36"}}]])))
 
 (defn badan-2
   []
+(fn []
   [rui/tabs
    [rui/tab
     {:label "App #1"
@@ -115,7 +112,7 @@
      :style {:background "#DA7F36"}}]
    [rui/tab
     {:label "App #3"
-     :style {:background "#DA7F36"}}]])
+     :style {:background "#DA7F36"}}]]))
 
 
 
@@ -123,8 +120,7 @@
 (defn body
   []
   (fn []
-    (let [username (re/subscribe [:username])
-          badan (re/subscribe [:body])]
+    (let [badan (re/subscribe [:body])]
       [:div
        [rui/drawer
         {:open @toogle-state
@@ -138,11 +134,11 @@
         [rui/menu-item
          {:primary-text "Apps"
           :on-touch-tap #(re/dispatch
-                          [:set-body (badan-2)]
-                          [:set-title "Apps"])}]]
+                          [:set-body [badan-2]])}]]
        (if (nil? @badan)
          [badan-1]
          @badan)])))
+
 
  (defn footer
    []
@@ -164,3 +160,5 @@
     [header]
     [body]
     [footer]]])
+
+

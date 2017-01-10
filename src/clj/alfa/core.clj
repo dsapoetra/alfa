@@ -1,1 +1,7 @@
- (ns alfa.core)
+ (ns alfa.core
+   (:gen-class)
+)
+
+
+(defn -main [& args]
+)
